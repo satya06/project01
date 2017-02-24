@@ -292,6 +292,31 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 
+/* itenary section */
+#itenary{
+	height: 100%;
+}
+
+#itenary .day{
+	float: left;
+	width: 100px;
+}
+
+#itenary .day h3,h1{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-align: right;
+}
+
+#itenary .day_detail{
+	float: right;
+	border: 1px solid #000;
+	width: 80%;
+	height: inherit;
+	min-height: 250px;
+
+}
+
 
 /* speaker Section */
 #speaker {
@@ -349,6 +374,105 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 
+
+.pad-zero{
+	padding: 0px;
+}
+
+
+
+/* see_yourself */
+#see_yourself{
+	padding: 10px;
+}
+#see_yourself h2{
+	font-size: 38px;
+}
+
+#see_yourself span{font-size: 18px;}
+
+/*facilities section */
+#facilities {
+	background: #3f71ab;
+	padding: 50px 0px;
+}
+
+#facilities img{
+	width: 80px;
+	height: 80px;
+}
+
+#facilities .thumbnail {
+	background: transparent;
+	border: 1px;
+}
+
+#facilities .facilities-img {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+/*testimonials sction*/
+#testimonials .line{
+	padding: 20px;
+	border-bottom: 1px solid #5FC0E5;
+}
+
+
+
+
+
+
+
+
+
+/*trust section */
+#trust{
+	background-color: #5FC0E5;
+}
+
+#trust ul {
+	/*ist-style-image: url('img/whitebullet.gif') !important; */
+}
+#trust .section-title{
+	margin: 0px !important;
+}
+
+#trust h2{
+	padding-top: 10px;
+	text-transform: none;
+}
+
+#trust .trust-img{
+	box-shadow: 10px 10px 5px #888888;
+	padding: 10px;
+	position: relative;
+}
+
+.text-skyblue{
+	color: #5FC0E5;
+}
+
+.text-blue{
+	color: blue;
+}
+
+.text-white{
+	color: #FFF;
+}
+
+.text-royalblue{
+	color: #002366;
+}
+
+.text-darkblue{
+	color: #32318f;
+}
 
 .pad-zero{
 	padding: 0px;

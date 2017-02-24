@@ -28,7 +28,15 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 
 
+<link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script> 
+
+
+
 <link rel="stylesheet" type="text/css"  href="css/half-slider.css">
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -36,7 +44,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="app">
 <!-- Navigation
     ==========================================-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
@@ -276,8 +284,211 @@
 
 
 
+<!-- quick itenary -->
+<div id="itenary" class="text-left">
+  <div class="overlay">
+    <div class="container">
+      <div id="row" ng-controller="AppController as dayCtrl" ng-init="tab=2">
+          <div class="col-md-7">
+                <h2><strong>Quick itenary</strong></h2>
+                <div >
+                    <section class="day" class="text-right" >
+                        <h1>July</h1>
+                        <h3><a class="active" ng-click="tab = 0">01</a></h3>
+                        <h3><a ng-click="tab = 1">02</a></h3>
+                        <h3><a ng-click="tab = 2">03</a></h3>
+                        <h3><a ng-click="tab = 3 ">04</a></h3>
+                        <h3><a ng-click="tab = 4">05</a></h3>
+                        <h3><a ng-click="tab = 5">06</a></h3>
+                        <h3><a ng-click="tab = 6">07</a></h3>
+                        <h3><a ng-click="tab = 7">08</a></h3>
+                        <h3><a ng-click="tab = 8">09</a></h3>
+                        
+                    </section>
+                  
+                    <section class="day_detail">
+                        <h3 class="blue">{{dayCtrl.days[tab].name}}</h3>
+                        <h4 class="sky">{{dayCtrl.days[tab].title}}</h4>
+                        <ul ng-repeat="d in dayCtrl.days[tab].details">
+                            <li>{{d}}</li>
+                        </ul>
+                    </section>
+                </div>
+          </div>
+
+          <div class="col-md-5">
+
+          	<div class="slider8" ng-repeat="url in dayCtrl.days[tab].images">
+          		 <div class="slide"><img src="{{url}}"></div>
+         	</div>
+             
+        </div>
+
+       
+
+
+          </div>
+      </div>
+    </div>
+  </div>   
+</div>
+
+
+<!-- facilities Section -->
+<div id="facilities">
+  <div class="container facilities">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 text-center">
+        <h2 class="text-white"><strong>We take care of everything</strong></h2>
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <div class="row">
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="..." width="80px" height="80px">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Flights</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Visa</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Accommodation</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Entrance Tickets</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Experts & Guides</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Meals</figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Program Director</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Ground Transportion</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Workshops</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Insurance Covers</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Adventure Activities</figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <figure class="figure">
+              <div class="facilities-img"> 
+                <img src="img/facilities/01.jpg" alt="...">
+              </div> 
+              <div class="caption">
+                <figcaption class="figure-caption text-white">Travel Kit</figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="see_yourself">
+    <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-5 col-lg-5 text-right">
+            <h2><strong class="sky">See for yourself</strong> </h2>
+         </div>
+         <div class="col-sm-12 col-md-7 col-lg-7 text-left">
+            <span style="color:#2B328C;"><strong>Hear straight from the kids:</strong></span><br/>
+            <span>*Content of the video may differ from the actual program</span>
+         </div>
+      </div>
+    </div>  
+</div>
+
+
 <!-- Vedio Section -->
- <div id="video">
+<!--  <div id="video">
   <div class="container1">
     <div class="row">
         <video  id="backgroundvid" width="100%"> 
@@ -288,7 +499,7 @@
         </video>
     </div>
   </div>
-</div> 
+</div>  -->
 
 <!-- Speaker Section -->
 <div id="speaker">
@@ -327,15 +538,119 @@
 
 
 
+<!-- Testimonials Section -->
+<div id="testimonials" class="text-left">
+  <div class="overlay">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="text-skyblue"><strong>Our customers love us!</strong></h2>
+      </div>
+      
+      <div class="row line">
+        <div class="testimonial">
+          <div class="testimonials-img col-xs-12 col-md-2">
+            <center><img src="img/team/01.jpg" alt="..." width="60%" height="50%" /></center>
+          </div>
+          <div class="caption col-xs-12 col-md-10">
+            <q class="text-blue">This outing was my best school trip till date! While my friends have contributed greatly to the nature of this excursion, credit must be given to the amazing program director and chaperones who were present with us throughout the trip. They did whatever it takes to make this trip memorable for us. I will cherish this trip throughout my life and wish such trips are conducted more often for students.</q>
+            <p class="text-skyblue"><cite>Ammar Naqshnbandi</cite></p>
+            <p class="text-skyblue"><cite>DPS Dubai</cite></p>
+        </div>
+        </div>
+    </div>
+    
+   
+
+    <div class="row line">
+      <div class="testimonial">
+        <div class="testimonials-img col-xs-12 col-md-2">
+          <center><img src="img/team/01.jpg" alt="..." height= "50%" width="60%"></center>
+        </div>
+        <div class="caption col-xs-12 col-md-10">
+              <q class="text-blue">This trip has helped me learn two very important things - time management and the importance of being independent. This trip was highly informative and guess, was much needed for us. The Program Director was fabulous and taught us several essential things which will be helpful for us in life. To be honest, I definitely can’t wait for my next trip with Explorars!</q>
+              <p class="text-skyblue"><cite>Simone Yogesh Mohiti</cite></p>
+              <p class="text-skyblue"><cite>DPS Dubai</cite></p>
+            </div>
+          </div>
+    </div>
+   
+    <div class="row line">
+      <div class="testimonial">
+        <div class="testimonials-img col-xs-12 col-md-2"><center><img src="img/team/01.jpg" alt="..." height= "50%" width="60%"></center></div>
+            <div class="caption col-xs-12 col-md-10">
+        <q class="text-blue">Explorars did a fabulous job organizing and putting together all aspects of the trip, this included the booking of tickets to arranging the hotel stay and planning every day of the trip. The students returned safe, happy and with wonderful memories of the trip.</q>
+              <p class="text-skyblue"><cite>Anushree Phadke</cite></p>
+        <p class="text-skyblue"><cite>Activity Coordinator at Dubai Gem Private School</cite></p>
+      </div>
+          </div>
+      </div>
+      
+
+      <div class="row line">
+        <div class="testimonial">
+          <div class="testimonials-img col-xs-12 col-md-2"><center><img src="img/team/01.jpg" alt="..." height= "50%" width="60%"></center></div>
+            <div class="caption col-xs-12 col-md-10">
+        <q class="text-blue">According to me, this trip was much beyond fantastic and was definitely the best experience that I have had till date. The best part about this program was the NASA Workshop which highly motivated me that helped me realize my passion in life.</q>
+              <p class="text-skyblue"><cite>Sidhant Sardana</cite></p>
+        <p class="text-skyblue"><cite>DPS Dubai</cite></p>
+      </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+<!-- Trust Section -->
+<div id="trust" class="text-left">
+  <div class="container">
+    <div class="row1">
+     <div class="section-title text-left">
+        <h2 class="text-white"><strong>Feel safe with us </strong><img src="img/whitebullet.GIF"></h2>
+      </div>
+      <div class="col-xs-12 col-md-8 ">
+        <ul style="list-style-image: url('img/whitebullet.GIF');">
+          <li><span class="text-blue">Inputs from expert educators, learning led by expert instructors who are authorities in the field of study</span></li>
+          <li><span class="text-blue">A detailed </span><b class="text-white">Risk Assessment</b><span class="text-blue"> is performed for every program before it is undertaken</span></li>
+          <li><span class="text-blue">200-point </span><b class="text-white">Safety Checklist</b><span class="text-blue"> basis guidelines from International student travel organisations</span></li>
+          <li><span class="text-blue">Members of WYSETC </span><b class="text-white">(World Youth Student & Educational Travel Confederation)</b><span class="text-blue">, Netherlands</span></li>
+          <li><span class="text-blue">Comprehensive <b class="text-white">travel insurance</b></li>
+          <li><span class="text-blue">Accompanying Program Directors trained in managing students and emergency first aid<span></li>
+          <li><b class="text-white">Clinic on call</b><span class="text-blue"> at every destination</span></li>
+          <li><span class="text-blue">We follow <b class="text-white">sustainability standards<b></li>
+          <li><span class="text-blue">Please refer to our website <a href="www.explorars.com" class="text-white">www.explorars.com</a> for more details</span></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <div class="trust-img"><img src="img/team/03.jpg" alt="..." height= "42" width="42"></div>
+      <div class="trust-img"><img src="img/team/03.jpg" alt="..." height= "42" width="42"></div>
+    </div>
+  </div>
+</div>
 
 
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
- 
+<script type="text/javascript" src="bxslider/jquery.bxslider.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+	$('.slider8').bxSlider({
+    mode: 'vertical',
+   
+    minSlides: 2,
+    slideMargin: 10
+  });
+</script>
+
+
+<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 </html>
